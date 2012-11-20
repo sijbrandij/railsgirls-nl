@@ -1,0 +1,10 @@
+<%= form_for @resource do |form| %>
+  <%= form.label "Title" %>
+  <%= form.text_field :title %>
+  <%= form.label "Description" %>
+  <%= form.text_field :description %>
+  <%= form.label "URL" %>
+  <%= form.text_field :url %>
+  <br />
+  <%= form.submit "Submit" %>
+<% end %>

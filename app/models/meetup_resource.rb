@@ -10,11 +10,11 @@ class MeetupResource < ActiveResource::Base
 
 
   #if RAILS_ENV != 'production' 
-    ActiveResource::Base.logger = RAILS_DEFAULT_LOGGER
+    ActiveResource::Base.logger = Rails.logger
   #end
   
   # Get your API key at http://www.meetup.com/meetup_api/key/?op=reset
-  API_KEY = ""
+  API_KEY = "1e257262d482912a8627169276c7a"
 
   # Meetup API Limits: http://www.meetup.com/meetup_api/docs/#limits
   API_MAX_RESULTS = 200

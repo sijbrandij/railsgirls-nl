@@ -1,0 +1,25 @@
+<h1>Resources</h1>
+<br />
+<%= link_to "New resource", new_resource_path %><br /><br />
+<% unless @resources.empty? %>
+  <table>
+    <thead>
+    	<tr>
+    		<th>Name</th>
+    		<th>Description</th>
+    		<th>URL</th>
+    	</tr>
+    </thead>
+    <tbody>
+    	<% @resources.each do |resource| %>
+    	  <tr onclick="location.href='<%= edit_resource_path(resource) %>'">
+    	  	<td><%= resource.title %></td>
+    	  	<td><%= resource.description %></td>
+    	  	<td><%= link_to("Go", resource.url, :target => "_blank") %></td>
+    	  </tr>
+    	<% end %>
+    </tbody>
+  </table>
+<% else %>
+  There are no resources.
+<% end %>

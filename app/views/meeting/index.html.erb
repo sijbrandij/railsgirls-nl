@@ -1,0 +1,24 @@
+<div class='row'>
+	<div class='span8'>
+		<h2>Events for upcoming month</h2>
+
+		<% @events.each do | event| %>
+		<h3><%=event.name%></h3>
+		<p> <%= raw event.description %></p>
+		<p><%= event.status %> <%=l Time.parse(event.time), :format => :short %></p>
+		<%  end %>
+	</div>
+	<div class='span4'>
+		<h2>Calendar goes here</h2>
+	</div>
+</div>
+
+<%= @member.name %>
+
+
+
+<% @group.each do | group| %>
+<p><%=group.description%> <%= group.id %></p>
+<%  end %>
+
+Three closest events

@@ -1,4 +1,4 @@
-class MeetupMember < MeetupResource
+class MeetupEvent < MeetupResource
 
   # Examples:
   #  group_members = MeetupMember.for_group('437658')
@@ -7,6 +7,15 @@ class MeetupMember < MeetupResource
     @api_key = api_key.blank? ? API_KEY : api_key 
 
     find_everything(:params => { :group_id => group_id })  
+  end
+
+    # Examples:
+  #  group_members = MeetupMember.for_group('437658')
+  #  group_members = MeetupMember.for_group('437658,45679')
+  def self.for_group_name(group_name, api_key = nil)
+    @api_key = api_key.blank? ? API_KEY : api_key 
+
+    find_everything(:params => { :group_urlname => group_name, :time => "1m", :status => "upcoming"})  
   end
 
   # Examples:
