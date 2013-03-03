@@ -11,14 +11,16 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120920184336) do
+ActiveRecord::Schema.define(:version => 20130303144052) do
 
   create_table "resources", :force => true do |t|
     t.string   "title"
     t.string   "url"
     t.string   "description"
-    t.datetime "created_at",  :null => false
-    t.datetime "updated_at",  :null => false
+    t.datetime "created_at",                 :null => false
+    t.datetime "updated_at",                 :null => false
+    t.integer  "upvotes",     :default => 0
+    t.integer  "downvotes",   :default => 0
   end
 
 end

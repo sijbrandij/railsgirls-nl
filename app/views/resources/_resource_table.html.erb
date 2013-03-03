@@ -1,0 +1,29 @@
+<% unless @resources.empty? %>
+  <table>
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Description</th>
+            <th>URL</th>
+            <th>Votes</th>
+        </tr>
+    </thead>
+    <tbody>
+        <% @resources.each do |resource| %>
+          <tr>
+            <td onclick="location.href='<%= edit_resource_path(resource) %>'"><%= resource.title %></td>
+            <td onclick="location.href='<%= edit_resource_path(resource) %>'"><%= resource.description %></td>
+            <td><%= link_to("Go", resource.url, :target => "_blank") %></td>
+            <td>
+                <%= resource.votes %>
+                <%= link_to 'Yeah!', upvote_resource_path(resource, :format => :js), :method => :post, :remote => true %>
+                | <%= link_to 'Meh..', downvote_resource_path(resource, :format => :js), :method => :post, :remote => true %>
+            </td>
+          </tr>
+        <% end %>
+    </tbody>
+  </table>
+<% else %>
+  There are no resources.
+<% end %>
+
