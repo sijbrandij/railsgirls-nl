@@ -27,8 +27,11 @@ RailsGirls::Application.routes.draw do
 
   match 'participate' => 'meeting#index'
 
-  resources :resources
-  
+  resources :resources do
+    post 'upvote', :on => :member, :as => :upvote
+    post 'downvote', :on => :member, :as => :downvote
+  end
+
   root :to => 'meeting#index'
 
   # Sample resource route with sub-resources:

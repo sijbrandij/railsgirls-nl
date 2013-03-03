@@ -1,6 +1,11 @@
 class ResourcesController < ApplicationController
   def index
-  	@resources = Resource.all
+  	@resources = Resource.order('upvotes - downvotes desc').all
+
+    respond_to do |format|
+      format.html
+      format.js
+    end
   end
 
   def show
@@ -42,5 +47,19 @@ class ResourcesController < ApplicationController
   	@resource.destroy
   	flash[:notice] = "Resource deleted" if @resource.destroy
   	redirect_to resources_path
+  end
+
+  def upvote
+    @resource = Resource.find(params[:id])
+    @resource.upvote
+    @resource.save
+    redirect_to resources_path(:format => :js)
+  end
+
+  def downvote
+    @resource = Resource.find(params[:id])
+    @resource.downvote
+    @resource.save
+    redirect_to resources_path(:format => :js)
   end
 end
