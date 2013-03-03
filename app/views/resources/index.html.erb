@@ -13,10 +13,9 @@
     </thead>
     <tbody>
     	<% @resources.each do |resource| %>
-    	  <tr onclick="location.href='<%= edit_resource_path(resource) %>'">
-            <td><%= link_to resource.title, edit_resource_path(resource) %></td>
-    	  	<td><%= resource.title %></td>
-    	  	<td><%= resource.description %></td>
+    	  <tr>
+    	  	<td onclick="location.href='<%= edit_resource_path(resource) %>'"><%= resource.title %></td>
+    	  	<td onclick="location.href='<%= edit_resource_path(resource) %>'"><%= resource.description %></td>
     	  	<td><%= link_to("Go", resource.url, :target => "_blank") %></td>
     	  </tr>
     	<% end %>
