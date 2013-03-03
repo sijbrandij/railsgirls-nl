@@ -23,7 +23,7 @@ group :assets do
 end
 
 
-gem 'psych'
+
 gem 'jquery-rails'
 
 group :development do
