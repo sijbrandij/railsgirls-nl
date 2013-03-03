@@ -9,7 +9,12 @@
 		<%  end %>
 	</div>
 	<div class='span4'>
-		<h2>Calendar goes here</h2>
+		<h2>Upcoming Events</h2>
+		<% @events.each do |event| %>
+		<h3><%= link_to event.name, event.event_url %></h3>
+		<p><%=event.venue_city%></p>
+		<p><%=event.time.to_datetime.strftime("%d/%m/%Y")%></p>
+		<% end %>
 	</div>
 </div>
 
@@ -20,5 +25,3 @@
 <% @group.each do | group| %>
 <p><%=group.description%> <%= group.id %></p>
 <%  end %>
-
-Three closest events
