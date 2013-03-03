@@ -28,6 +28,7 @@ RailsGirls::Application.routes.draw do
   match 'participate' => 'meeting#index'
 
   resources :resources
+  
   root :to => 'meeting#index'
 
   # Sample resource route with sub-resources:
