@@ -6,6 +6,7 @@ gem 'rails', '>= 3.2.12'
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 gem 'pg'
+gem 'heroku'
 
 
 # Gems used only for assets and not required
@@ -28,6 +29,10 @@ gem 'jquery-rails'
 
 group :development do
 	gem 'awesome_print'
+end
+
+group :production do
+  gem 'thin'
 end
 
 # To use ActiveModel has_secure_password
