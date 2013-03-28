@@ -2,26 +2,26 @@
 	<div class='span8'>
 		<h2>Events for upcoming month</h2>
 
-		<% @events.each do | event| %>
-		<h3><%=event.name%></h3>
-		<p> <%= raw event.description %></p>
-		<p><%= event.status %> <%=l Time.parse(event.time), :format => :short %></p>
-		<%  end %>
-	</div>
-	<div class='span4'>
-		<h2>Upcoming Events</h2>
-		<% @events.each do |event| %>
-		<h3><%= link_to event.name, event.event_url %></h3>
-		<p><%=event.venue_city%></p>
-		<p><%=event.time.to_datetime.strftime("%d/%m/%Y")%></p>
-		<% end %>
+		<%# @events.each do | event| %>
+		<h3>Follow-up meeting</h3>
+		<h4>13 April 2013</h4>
+		<p>
+			<b>The programme</b><br />
+			<br />
+			10h arrival, introductions, projects<br />
+			11h -13h work on projects<br />
+			13h - 14h lunch (provided by us)<br />
+			14h - 17h code, chat, ask questions, whatever you like :) <br />
+			17h pizza!<br />
+			<br />
+			<b>Sponsor</b><br />
+			This meetup will again be sponsored by <%= link_to "UtrechtInc", "http://www.utrechtinc.nl" %>
+		</p>
+		<p>
+      <b>Location</b><br />
+      UtrechtInc, Padualaan 8, Utrecht
+
+
+		</p>
 	</div>
 </div>
-
-<%= @member.name %>
-
-
-
-<% @group.each do | group| %>
-<p><%=group.description%> <%= group.id %></p>
-<%  end %>
