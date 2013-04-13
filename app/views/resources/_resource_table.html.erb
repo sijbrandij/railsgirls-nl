@@ -16,8 +16,8 @@
             <td><%= link_to("Go", resource.url, :target => "_blank") %></td>
             <td>
                 <%= resource.votes %>
-                <%= link_to 'Yeah!', upvote_resource_path(resource, :format => :js), :method => :post, :remote => true %>
-                | <%= link_to 'Meh..', downvote_resource_path(resource, :format => :js), :method => :post, :remote => true %>
+                <%= link_to '<i class="icon-thumbs-up"> </i>'.html_safe, upvote_resource_path(resource, :format => :js), :method => :post, :remote => true %>
+                | <%= link_to '<i class="icon-thumbs-down"> </i>'.html_safe, downvote_resource_path(resource, :format => :js), :method => :post, :remote => true %>
             </td>
           </tr>
         <% end %>
