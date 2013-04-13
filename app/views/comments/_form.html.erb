@@ -1,0 +1,9 @@
+<%= form_for @comment do |form| %>
+  <%= form.hidden_field :resource_id, :value => params[:resource_id] %>
+  <%= form.label "Author" %>
+  <%= form.text_field :author %>
+  <%= form.label "Comment" %>
+  <%= form.text_field :comment %>
+  <br />
+  <%= form.submit "Submit" %>
+<% end %>
