@@ -10,6 +10,7 @@ class ResourcesController < ApplicationController
 
   def show
   	@resource = Resource.find(params[:id])
+    @comments = @resource.comments
   end
 
   def new
