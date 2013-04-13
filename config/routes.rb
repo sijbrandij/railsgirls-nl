@@ -28,6 +28,7 @@ RailsGirls::Application.routes.draw do
   match 'participate' => 'meeting#index'
 
   resources :resources do
+    resources :comments
     post 'upvote', :on => :member, :as => :upvote
     post 'downvote', :on => :member, :as => :downvote
   end
