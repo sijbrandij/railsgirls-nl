@@ -1,5 +1,5 @@
 <% unless @resources.empty? %>
-  <table>
+  <table class="table table-striped">
     <thead>
         <tr>
             <th>Name</th>
@@ -11,8 +11,8 @@
     <tbody>
         <% @resources.each do |resource| %>
           <tr>
-            <td onclick="location.href='<%= edit_resource_path(resource) %>'"><%= resource.title %></td>
-            <td onclick="location.href='<%= edit_resource_path(resource) %>'"><%= resource.description %></td>
+            <td onclick="location.href='<%= resource_path(resource) %>'"><%= resource.title %></td>
+            <td onclick="location.href='<%= resource_path(resource) %>'"><%= resource.description %></td>
             <td><%= link_to("Go", resource.url, :target => "_blank") %></td>
             <td>
                 <%= resource.votes %>
