@@ -15,7 +15,7 @@ class MeetupEvent < MeetupResource
   def self.for_group_name(group_name, api_key = nil)
     @api_key = api_key.blank? ? API_KEY : api_key 
 
-    find_everything(:params => { :group_urlname => group_name, :time => "1m", :status => "upcoming"})  
+    find_everything(:params => { :group_urlname => group_name, :time => "1m"})  
   end
 
   # Examples:

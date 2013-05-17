@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130413132705) do
+ActiveRecord::Schema.define(:version => 20130517162849) do
 
   create_table "comments", :force => true do |t|
     t.string   "author"
@@ -19,6 +19,25 @@ ActiveRecord::Schema.define(:version => 20130413132705) do
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
     t.integer  "resource_id"
+  end
+
+  create_table "events", :force => true do |t|
+    t.string   "venue_state"
+    t.string   "venue_address2"
+    t.string   "venue_address1"
+    t.text     "description"
+    t.string   "venue_address3"
+    t.string   "status"
+    t.string   "how_to_find_us"
+    t.string   "event_url"
+    t.string   "venue_city"
+    t.string   "name"
+    t.string   "venue_map"
+    t.datetime "time"
+    t.string   "venue_name"
+    t.datetime "created_at",     :null => false
+    t.datetime "updated_at",     :null => false
+    t.integer  "event_id"
   end
 
   create_table "resources", :force => true do |t|
