@@ -3,16 +3,16 @@
 		<h2>Upcoming events</h2>
 		<% @events.each do | event| %>
 		  <div class="well">
-			  <h3><%= event.name %>: <%= event.time.to_date.to_formatted_s(:long) %></h3>
-			  <h5><%= link_to "Signup", event.event_url, target: "_blank" %></h5>
-			  <%= event.description.html_safe %>
+			  <h3><%= event.name if event.name %>: <%= event.time.to_date.to_formatted_s(:long) %></h3>
+			  <h5><%= link_to "Signup", event.event_url, target: "_blank" if event.event_url%></h5>
+			  <%= event.description.html_safe if event.description %>
 			  <h5>Location</h5>
-			  <%= event.venue_name %><br />
-			  <%= event.venue_address1 %><br />
+			  <%= event.venue_name if event.venue_name %><br />
+			  <%= event.venue_address1 if event.venue_address1 %><br />
 			  <%= event.venue_address2 + "<br />".html_safe if event.venue_address2 %>
 			  <%= event.venue_address3 + "<br />".html_safe if event.venue_address3 %>
-			  <%= event.venue_city %><br />
-			  <%= link_to "Map", event.venue_map, target: "_blank" %>
+			  <%= event.venue_city if event.venue_city %><br />
+			  <%= link_to "Map", event.venue_map, target: "_blank" if event.venue_map %>
 			</div>
 		<% end %>
 	</div>
