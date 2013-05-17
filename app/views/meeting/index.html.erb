@@ -1,19 +1,27 @@
 <div class='row'>
 	<div class='span8'>
-		<h2>Upcoming events</h2>
-		<% @events.each do | event| %>
-		  <div class="well">
-			  <h3><%= event.name %>: <%= event.time.to_date.to_formatted_s(:long) %></h3>
-			  <h5><%= link_to "Signup", event.event_url, target: "_blank" %></h5>
-			  <%= event.description.html_safe %>
-			  <h5>Location</h5>
-			  <%= event.venue_name %><br />
-			  <%= event.venue_address1 %><br />
-			  <%= event.venue_address2 + "<br />".html_safe if event.venue_address2 %>
-			  <%= event.venue_address3 + "<br />".html_safe if event.venue_address3 %>
-			  <%= event.venue_city %><br />
-			  <%= link_to "Map", event.venue_map, target: "_blank" %>
-			</div>
-		<% end %>
+		<div class='well'>
+			<h2>Events for upcoming month</h2>
+
+			<%# @events.each do | event| %>
+			<h3>Follow-up meeting</h3>
+			<h4>25 May 2013</h4>
+			<p>
+				<b>The programme</b><br />
+				<br />
+				10h arrival, introductions, projects<br />
+				11h -13h work on projects<br />
+				13h - 14h lunch (provided by us)<br />
+				14h - 17h code, chat, ask questions, whatever you like :) <br />
+				17h pizza!<br />
+				<br />
+			</p>
+			<p>
+      	<b>Location</b><br />
+      	UtrechtInc, Padualaan 8, Utrecht
+		  </p>
+		  <p>
+		  	<%= link_to "Signup", "http://www.meetup.com/RailsGirls-NL/events/112638382/", target: "_blank" %>
+		  </p>
 	</div>
 </div>
