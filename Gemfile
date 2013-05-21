@@ -29,6 +29,7 @@ gem 'jquery-rails'
 
 group :development do
 	gem 'awesome_print'
+	gem 'sqlite3'
 end
 
 group :production do
