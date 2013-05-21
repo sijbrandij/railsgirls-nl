@@ -1,28 +1,31 @@
-<div class='row'>
-	<div class='span8'>
-		<div>
+<% @events.each do |event| %>
+	<%= link_to event.name, event.event_url, target: :_blank %>
+<% end %>
 
-			<% @events.each do |event| %>
-				<%= link_to event.name, event.event_url, target: :_blank %>
-			<% end %>
-			<h3>Follow-up meeting</h3>
-			<h4>25 May 2013</h4>
-			<p>
-				<b>The programme</b><br />
-				<br />
-				10h arrival, introductions, projects<br />
-				11h -13h work on projects<br />
-				13h - 14h lunch (provided by us)<br />
-				14h - 17h code, chat, ask questions, whatever you like :) <br />
-				17h pizza!<br />
-				<br />
-			</p>
-			<p>
-      	<b>Location</b><br />
-      	UtrechtInc, Padualaan 8, Utrecht
-		  </p>
-		  <p class="signup">
-		  	<%= link_to "Signup", "http://www.meetup.com/RailsGirls-NL/events/112638382/", target: "_blank" %>
-		  </p>
+<div class='row'>
+	<img class='span8' src="http://maps.googleapis.com/maps/api/staticmap?center=Brooklyn+Bridge,New+York,NY&zoom=13&size=450x250&maptype=roadmap
+&markers=color:blue%7Clabel:S%7C40.702147,-74.015794&markers=color:green%7Clabel:G%7C40.711614,-74.012318
+&markers=color:red%7Ccolor:red%7Clabel:C%7C40.718217,-73.998284&sensor=false" alt="">
+
+	<div class="span4">
+		<h3>Follow-up meeting</h3>
+		<h4>25 May 2013</h4>
+		<p>
+			<b>The programme</b><br />
+			<br />
+			10h arrival, introductions, projects<br />
+			11h -13h work on projects<br />
+			13h - 14h lunch (provided by us)<br />
+			14h - 17h code, chat, ask questions, whatever you like :) <br />
+			17h pizza!<br />
+			<br />
+		</p>
+		<p>
+	      	<b>Location</b><br />
+	      	UtrechtInc, Padualaan 8, Utrecht
+		</p>
+		<p class="signup">
+			<%= link_to "Signup", "http://www.meetup.com/RailsGirls-NL/events/112638382/", target: "_blank" %>
+		</p>
 	</div>
 </div>
