@@ -10,7 +10,7 @@
 		color: #FFF;
 		font-size: 36px;
 		font-weight: normal;
-		width: 210px;
+		width: 250px;
 		margin: 0 auto;
 		padding: 10px 30px;
 		display: block;
@@ -30,4 +30,26 @@
 		text-decoration:none;
 		background: #af2d09;
 	}
+}
+
+.navbar {
+	margin: 0px;
+	position: relative;
+	top: 30px;
+	width: 60%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.navbar-inner {
+	background: #D3360B;
+	border: none;
+	box-shadow: none;
+}
+
+.navbar .nav>li>a {
+	color: #ffffff;
+	text-decoration: none;
+	text-shadow: none;
+	font-size: 120%;
 }
