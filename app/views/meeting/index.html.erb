@@ -1,27 +1,26 @@
-<div class='row'>
-	<div class='span8'>
-		<h2>Events for upcoming month</h2>
-
-		<% @events.each do | event| %>
-		<h3><%=event.name%></h3>
-		<p> <%= raw event.description %></p>
-		<p><%= event.status %> <%=l Time.parse(event.time), :format => :short %></p>
-		<%  end %>
+<div class="row-fluid">
+	<div class="span8">
+		<iframe width="500" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.nl/maps/ms?msa=0&amp;msid=203537845530819548261.0004dd7889e52ff6774de&amp;ie=UTF8&amp;t=m&amp;ll=52.085413,5.169153&amp;spn=0.01846,0.042915&amp;z=14&amp;output=embed"></iframe><br /><small><a href="https://maps.google.nl/maps/ms?msa=0&amp;msid=203537845530819548261.0004dd7889e52ff6774de&amp;ie=UTF8&amp;t=m&amp;ll=52.085413,5.169153&amp;spn=0.01846,0.042915&amp;z=14&amp;source=embed" style="color:#0000FF;text-align:left">Padualaan 8</a></small>
 	</div>
-	<div class='span4'>
-		<h2>Upcoming Events</h2>
-		<% @events.each do |event| %>
-		<h3><%= link_to event.name, event.event_url %></h3>
-		<p><%=event.venue_city%></p>
-		<p><%=event.time.to_datetime.strftime("%d/%m/%Y")%></p>
-		<% end %>
+	<div class="span4">
+		<h3>Follow-up meeting</h3>
+		<h4>25 May 2013</h4>
+		<p>
+			<b>The programme</b><br />
+			<br />
+			10h arrival, introductions, projects<br />
+			11h -13h work on projects<br />
+			13h - 14h lunch (provided by us)<br />
+			14h - 17h code, chat, ask questions, whatever you like :) <br />
+			17h pizza!<br />
+			<br />
+		</p>
+		<p>
+	      	<b>Location</b><br />
+	      	UtrechtInc, Padualaan 8, Utrecht
+		</p>
+		<p class="signup">
+			<%= link_to "Signup", "http://www.meetup.com/RailsGirls-NL/events/112638382/", target: "_blank" %>
+		</p>
 	</div>
 </div>
-
-<%= @member.name %>
-
-
-
-<% @group.each do | group| %>
-<p><%=group.description%> <%= group.id %></p>
-<%  end %>

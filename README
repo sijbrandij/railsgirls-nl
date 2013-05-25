@@ -1,19 +1,12 @@
+Hello and welcome to the RailsGirlsNL project!
 
-ActiveResource classes for use with the Meetup.com API
+The RailsGirlsNL project has been started as a project for alumni of Dutch RailsGirls events to work on to get more experience programming, and to have a project to focus their learning on.
+The project is meant to be the platform for RailsGirls to find resources, connect to one another, share code and do much more.
+Any ideas for making the website even more useful for RailsGirls are very welcome!
 
-I've used some of this code to power the Meetup API integration 
-to generate meetup.com event name badges with http://big.first.name/
+How to contribute to RailsGirlsNL
+- submitting an issue; please contact us if you have an issue to submit;
+- contributing to the project; feel free to fork the project and send pull requests. In your pull request, please reference the issue you are contributing to.
 
-
-Example Usage:
-
-First set your meetup.com api key in API_KEY in the base class MeetupResource
-
-  rsvps = MeetupRsvp.for_event('9190765')
-  first_rsvp = rsvps.first
-  first_member_details = MeetupMember.for_member(first_rsvp.member_id)
-  groups_of_first_member = MeetupGroup.for_member(first_member_details.id)
-  fellow_group_member_details = MeetupMember.for_group(groups_of_first_member.map{|g| g.id}.join(","))
-
-
+In the future, contributors to this project will be mentioned on the website <3
 
