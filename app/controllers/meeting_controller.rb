@@ -6,7 +6,7 @@ class MeetingController < ApplicationController
     # @events = Rails.cache.fetch 'meetup_events', expires_in: 10.minute do
     #   MeetupEvent.for_group_name(GROUPNAME)
     # end
-    @events = MeetupEvent.for_group(4812372)
-    raise @events.inspect
+    @meetup_events = MeetupEvent.for_group(4812372)
+    #raise @events.count.inspect
   end
 end
