@@ -1,6 +1,7 @@
 RailsGirls::Application.routes.draw do
 
   match 'participate' => 'meeting#index'
+  match 'connect' => 'connect#index'
   
   resources :comments
 
