@@ -1,3 +1,55 @@
 // Place all the styles related to the meeting controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.header{
+	font-family: 'Lilita One', cursive;
+	padding: 40px 0;
+	background: #D3360B;
+	.logo{
+		background: url(railsglogo.png) 10px 5px no-repeat;
+		color: #FFF;
+		font-size: 36px;
+		font-weight: normal;
+		width: 250px;
+		margin: 0 auto;
+		padding: 10px 30px;
+		display: block;
+		text-align: center;
+	}
+}
+
+.signup a{
+	background: #D3360B;
+	float:right;
+	padding: 10px 40px;
+	font-family: 'Lilita One', cursive;
+	color:white;
+	font-size:16px;
+	border-radius:5px;
+	&:hover{
+		text-decoration:none;
+		background: #af2d09;
+	}
+}
+
+.navbar {
+	margin: 0px;
+	position: relative;
+	top: 30px;
+	width: 60%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.navbar-inner {
+	background: #D3360B;
+	border: none;
+	box-shadow: none;
+}
+
+.navbar .nav>li>a {
+	color: #ffffff;
+	text-decoration: none;
+	text-shadow: none;
+	font-size: 120%;
+}
