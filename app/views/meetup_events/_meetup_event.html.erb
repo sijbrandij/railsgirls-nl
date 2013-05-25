@@ -1,0 +1,18 @@
+<div class="meetup">
+	<h2><%= meetup_event.name %></h2>
+	<%=	meetup_event.description.html_safe %>
+	<p><strong>date</strong><br />
+	  <%= time_tag Time.at(meetup_event.time.to_i / 1000) %>
+	</p>
+	<% venue = meetup_event.venue if meetup_event.respond_to?(:venue) %>
+	<% if venue %>
+	 <p><strong>location </strong><br />
+		 <%= venue.name %>,
+		 <%= venue.address_1 %>,
+		 <%= venue.city %>
+	 </p>
+	<% end %>
+	<p class="signup">
+		<%= link_to "Signup", meetup_event.event_url, target: "_blank" %>
+	</p>
+</div>
