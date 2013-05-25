@@ -26,6 +26,7 @@ RailsGirls::Application.routes.draw do
   #   end
 
   match 'participate' => 'meeting#index'
+  match 'connect' => 'connect#index'
   
   resources :comments
 
