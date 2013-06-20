@@ -2,7 +2,8 @@ RailsGirls::Application.routes.draw do
 
   match 'participate' => 'meeting#index'
   match 'connect' => 'connect#index'
-  
+  match 'contributors' => 'contributors#index'
+
   resources :comments
 
   resources :resources do
@@ -12,5 +13,5 @@ RailsGirls::Application.routes.draw do
 
   root :to => 'meeting#index'
 
- 
+
 end
