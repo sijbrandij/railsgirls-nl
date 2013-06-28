@@ -46,6 +46,8 @@ GEM
     excon (0.16.10)
     execjs (1.4.0)
       multi_json (~> 1.0)
+    faraday (0.8.7)
+      multipart-post (~> 1.1)
     heroku (2.35.0)
       heroku-api (~> 0.3.7)
       launchy (>= 0.3.2)
@@ -70,6 +72,7 @@ GEM
       treetop (~> 1.4.8)
     mime-types (1.21)
     multi_json (1.6.1)
+    multipart-post (1.2.0)
     netrc (0.7.7)
     pg (0.15.0)
     polyglot (0.3.3)
@@ -139,6 +142,7 @@ DEPENDENCIES
   awesome_print
   bootstrap-sass
   coffee-rails (~> 3.2.1)
+  faraday
   heroku
   jquery-rails
   pg
