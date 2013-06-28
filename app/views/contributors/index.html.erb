@@ -4,7 +4,7 @@
       <ul>
         <% @contributors.each do |contributor| %>
           <li>
-            <%= contributor["login"] %>
+            <%= link_to contributor['login'], contributor["html_url"] %>
           </li>
         <% end %>
       </ul>
