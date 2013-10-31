@@ -10,7 +10,7 @@ class ResourcesController < ApplicationController
 
   def show
   	@resource = Resource.find(params[:id])
-    @comments = @resource.comments
+    @comments = @resource.comments.select{|c| !c.spam?}
   end
 
   def new

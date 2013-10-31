@@ -58,5 +58,9 @@ module RailsGirls
 
     # Heroku requires this to be false
     config.assets.initialize_on_precompile=false
+
+    # Akismet credentials
+    config.rakismet.key = 'b500630f83a3'
+    config.rakismet.url = 'http://railsgirls.nl'
   end
 end
