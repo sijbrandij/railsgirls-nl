@@ -4,7 +4,9 @@ RailsGirls::Application.routes.draw do
   match 'connect' => 'connect#index'
   match 'contributors' => 'contributors#index'
 
-  resources :comments
+  resources :comments do
+    get :mark_as_spam, :unmark_as_spam, on: :member
+  end
 
   resources :resources do
     post 'upvote', :on => :member, :as => :upvote
@@ -12,6 +14,4 @@ RailsGirls::Application.routes.draw do
   end
 
   root :to => 'meeting#index'
-
-
 end
