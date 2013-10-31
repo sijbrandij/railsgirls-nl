@@ -12,6 +12,8 @@
   	  <th>Author</th>
   	  <th>Comment</th>
   	  <th>Date</th>
+      <th></th>
+      <th></th>
   	</tr>
   </thead>
   <tbody>
@@ -20,6 +22,8 @@
       	<td><%= comment.author %></td>
       	<td><%= comment.comment %></td>
       	<td><%= I18n.l(comment.created_at.to_date) %></td>
+        <td><%= link_to "Spam", mark_as_spam_comment_path %></td>
+        <td><%= link_to "Not spam", unmark_as_spam_comment_path %></td>
       </tr>
     <% end %>
   </tbody>

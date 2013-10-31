@@ -20,11 +20,15 @@
 .meetup{;
 	margin-bottom: 40px;
 	width: 400px;
+	padding: 10px 10px 50px 10px;
+	background-color: #ffffff;
+	border-radius: 25px;
 }
 .signup a{
 	background: #D3360B;
-	float:right;
+	float:left;
 	padding: 10px 40px;
+	display: inline;
 	font-family: 'Lilita One', cursive;
 	color:white;
 	font-size:16px;
@@ -55,4 +59,8 @@
 	text-decoration: none;
 	text-shadow: none;
 	font-size: 120%;
+}
+
+div.container#page-content {
+	background-color: #F2F2F2;
 }
