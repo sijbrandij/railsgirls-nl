@@ -90,7 +90,6 @@ GEM
       rdoc (~> 3.4)
       thor (>= 0.14.6, < 2.0)
     rake (10.0.3)
-    rakismet (1.4.0)
     rdoc (3.12.2)
       json (~> 1.4)
     ref (1.0.5)
@@ -139,7 +138,6 @@ DEPENDENCIES
   pg
   rails (~> 3.2.12)
   rails_12factor
-  rakismet
   sass-rails (~> 3.2.3)
   sqlite3
   therubyracer

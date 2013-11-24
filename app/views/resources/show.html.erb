@@ -4,27 +4,3 @@
 
 <%= link_to(@resource.url, @resource.url, :target => "_blank") %>
 
-<h2>Comments</h2>
-<%= link_to 'add comment', new_comment_path(resource_id: @resource.id) %><br />
-<table class="table table-striped">
-  <thead>
-  	<tr>
-  	  <th>Author</th>
-  	  <th>Comment</th>
-  	  <th>Date</th>
-      <th></th>
-      <th></th>
-  	</tr>
-  </thead>
-  <tbody>
-    <% @comments.each do |comment| %>
-      <tr>
-      	<td><%= comment.author %></td>
-      	<td><%= comment.comment %></td>
-      	<td><%= I18n.l(comment.created_at.to_date) %></td>
-        <td><%= link_to "Spam", mark_as_spam_comment_path %></td>
-        <td><%= link_to "Not spam", unmark_as_spam_comment_path %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
