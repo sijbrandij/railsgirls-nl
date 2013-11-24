@@ -6,7 +6,6 @@ gem 'rails', '~> 3.2.12'
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 gem 'pg'
-gem 'heroku'
 gem 'rakismet'
 gem 'faraday'
 
@@ -35,6 +34,7 @@ end
 
 group :production do
   gem 'thin'
+  gem 'rails_12factor'
 end
 
 # To use ActiveModel has_secure_password
