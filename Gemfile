@@ -5,7 +5,6 @@ gem 'rails', '~> 3.2.12'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
-gem 'pg'
 gem 'heroku'
 gem 'rakismet'
 gem 'faraday'
@@ -31,10 +30,12 @@ gem 'jquery-rails'
 
 group :development do
 	gem 'awesome_print'
+	gem 'sqlite3'
 end
 
 group :production do
   gem 'thin'
+  gem 'pg'
 end
 
 # To use ActiveModel has_secure_password
