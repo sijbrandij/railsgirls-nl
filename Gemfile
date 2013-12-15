@@ -40,6 +40,9 @@ end
 group :test do
   gem 'factory_girl'
   gem 'rspec-rails'
+  gem 'cucumber-rails', :require => false
+  gem 'database_cleaner'
+  gem 'launchy'
 end
 
 # To use ActiveModel has_secure_password
