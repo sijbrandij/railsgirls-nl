@@ -43,6 +43,7 @@ group :test do
   gem 'cucumber-rails', :require => false
   gem 'database_cleaner'
   gem 'launchy'
+  gem 'pry'
 end
 
 # To use ActiveModel has_secure_password
