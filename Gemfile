@@ -37,6 +37,15 @@ group :production do
   gem 'rails_12factor'
 end
 
+group :test do
+  gem 'factory_girl_rails'
+  gem 'rspec-rails'
+  gem 'cucumber-rails', :require => false
+  gem 'database_cleaner'
+  gem 'launchy'
+  gem 'pry'
+end
+
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 
