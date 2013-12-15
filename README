@@ -8,5 +8,8 @@ How to contribute to RailsGirlsNL
 - submitting an issue; please contact us if you have an issue to submit;
 - contributing to the project; feel free to fork the project and send pull requests. In your pull request, please reference the issue you are contributing to.
 
-For development you can use sqlite3; copy database.yml.example and name it database.yml
-
+Development instructions:
+- use Ruby 1.9
+- run bundle install --without production
+- cp config/database.yml.example config/database.yml
+- bundle exec rake db:setup
