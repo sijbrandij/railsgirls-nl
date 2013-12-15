@@ -66,6 +66,9 @@ GEM
     execjs (2.0.2)
     factory_girl (4.3.0)
       activesupport (>= 3.0.0)
+    factory_girl_rails (4.3.0)
+      factory_girl (~> 4.3.0)
+      railties (>= 3.0.0)
     faraday (0.8.8)
       multipart-post (~> 1.2.0)
     gherkin (2.12.2)
@@ -178,7 +181,7 @@ DEPENDENCIES
   coffee-rails (~> 3.2.1)
   cucumber-rails
   database_cleaner
-  factory_girl
+  factory_girl_rails
   faraday
   jquery-rails
   launchy

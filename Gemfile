@@ -38,7 +38,7 @@ group :production do
 end
 
 group :test do
-  gem 'factory_girl'
+  gem 'factory_girl_rails'
   gem 'rspec-rails'
   gem 'cucumber-rails', :require => false
   gem 'database_cleaner'
