@@ -41,9 +41,12 @@ GEM
       execjs
     coffee-script-source (1.6.3)
     daemons (1.1.9)
+    diff-lcs (1.2.5)
     erubis (2.7.0)
     eventmachine (1.0.3)
     execjs (2.0.2)
+    factory_girl (4.3.0)
+      activesupport (>= 3.0.0)
     faraday (0.8.8)
       multipart-post (~> 1.2.0)
     hike (1.2.3)
@@ -93,6 +96,17 @@ GEM
     rdoc (3.12.2)
       json (~> 1.4)
     ref (1.0.5)
+    rspec-core (2.14.7)
+    rspec-expectations (2.14.4)
+      diff-lcs (>= 1.1.3, < 2.0)
+    rspec-mocks (2.14.4)
+    rspec-rails (2.14.0)
+      actionpack (>= 3.0)
+      activesupport (>= 3.0)
+      railties (>= 3.0)
+      rspec-core (~> 2.14.0)
+      rspec-expectations (~> 2.14.0)
+      rspec-mocks (~> 2.14.0)
     sass (3.2.12)
     sass-rails (3.2.6)
       railties (~> 3.2.0)
@@ -133,11 +147,13 @@ DEPENDENCIES
   awesome_print
   bootstrap-sass
   coffee-rails (~> 3.2.1)
+  factory_girl
   faraday
   jquery-rails
   pg
   rails (~> 3.2.12)
   rails_12factor
+  rspec-rails
   sass-rails (~> 3.2.3)
   sqlite3
   therubyracer
