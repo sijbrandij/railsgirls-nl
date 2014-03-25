@@ -1,4 +1,4 @@
-class ConnectController < ApplicationControlle
+class ConnectController < ApplicationController
   def index
   end
 end
