@@ -1,5 +1,4 @@
 source 'https://rubygems.org'
-ruby '1.9.3'
 gem 'rails', '~> 3.2.12'
 
 # Bundle edge Rails instead:
@@ -9,26 +8,23 @@ gem 'faraday'
 
 # Gems used only for assets and not required
 # in production environments by default.
-group :assets do
-end
-  gem 'sass-rails',   '~> 3.2.3'
-  gem 'coffee-rails', '~> 3.2.1'
+gem 'sass-rails',   '~> 3.2.3'
+gem 'coffee-rails', '~> 3.2.1'
 
-  # See https://github.com/sstephenson/execjs#readme for more supported runtimes
-  gem 'therubyracer', :platform => :ruby
+# See https://github.com/sstephenson/execjs#readme for more supported runtimes
+gem 'therubyracer', :platform => :ruby
 
-  gem 'uglifier', '>= 1.0.3'
+gem 'uglifier', '>= 1.0.3'
 
-  gem 'bootstrap-sass'
-  gem 'twitter-bootstrap-rails'
-
-
+gem 'bootstrap-sass'
+gem 'twitter-bootstrap-rails'
 
 gem 'jquery-rails'
 
 group :development do
 	gem 'awesome_print'
 	gem 'sqlite3'
+  gem 'rubocop'
 end
 
 group :production do
