@@ -1,7 +1,4 @@
-class ConnectController < ApplicationController
-
-
-	def index
-
-	end
+class ConnectController < ApplicationControlle
+  def index
+  end
 end
