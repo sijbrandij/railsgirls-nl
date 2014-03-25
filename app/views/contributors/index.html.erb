@@ -1,15 +1,15 @@
 <div class='row'>
   <div class='span12'>
-    <h3>Contributors</h3>
-      <ul>
-        <% @contributors.each do |contributor| %>
-          <li class='contributor'>
-            <%= image_tag contributor["avatar_url"], size: "80x80" %>
-            <%= link_to contributor["login"], contributor["html_url"] %>
-          </li>
-        <% end %>
-      </ul>
-
+    <div class="contributor_container">
+      <h3>Contributors</h3>
+      <% @contributors.each do |contributor| %>
+        <div class='contributor'>
+          <%= link_to contributor["html_url"] do %>
+            <%= image_tag contributor["avatar_url"], size: "100x100", alt: contributor['login'] %>
+          <% end %>
+        </div>
+      <% end %>
+    </div>
   </div>
 </div>
 
