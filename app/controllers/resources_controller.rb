@@ -17,7 +17,7 @@ class ResourcesController < ApplicationController
   end
 
   def create
-    @resource = Resource.new(params[:resource])
+    @resource = Resource.new(resource_params)
     if @resource.save
       flash[:notice] = "Resource created"
       redirect_to resources_path
@@ -33,7 +33,7 @@ class ResourcesController < ApplicationController
 
   def update
   	@resource = Resource.find(params[:id])
-  	if @resource.update_attributes(params[:resource])
+  	if @resource.update_attributes(resource_params)
   	  flash[:notice] = "Resource updated!"
   	  redirect_to resources_path
   	else
@@ -61,5 +61,11 @@ class ResourcesController < ApplicationController
     @resource.downvote
     @resource.save
     redirect_to resources_path(:format => :js)
+  end
+  
+  private
+  
+  def resource_params
+    params.require(:resource).permit(:title, :description, :url)
   end
 end

@@ -1,5 +1,5 @@
 class Resource < ActiveRecord::Base
-  attr_accessible :title, :description, :url
+  # attr_accessible :title, :description, :url
 
   def upvote
     self.upvotes = self.upvotes.succ
