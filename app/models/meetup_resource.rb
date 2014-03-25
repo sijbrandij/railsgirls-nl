@@ -35,11 +35,12 @@ class MeetupResource < ActiveResource::Base
 
     def decode(xml)
       # ISO-8859-1 works for both OS X and Solaris
-      from_xml_data(
-        (Hash.from_xml(xml.sub('latin_1', 'ISO-8859-1'))['results']['items'] || {}).values.first)
+      xml_as_hash = Hash.from_xml(xml.sub('latin_1', 'ISO-8859-1'))
+      from_xml_data((xml_as_hash['results']['items'] || {}).values.first)
     end
 
     private
+
     # Manipulate from_xml Hash, because xml_simple is not exactly what we
     # want for ActiveResource.
     def from_xml_data(data)
@@ -54,14 +55,12 @@ class MeetupResource < ActiveResource::Base
   self.format = MeetupResource::MeetupXmlFormat
 
   def self.find(scope, args = {})
-    if args[:params]
-      args[:params].merge!(key: @api_key || API_KEY)
-    end
+    args[:params].merge!(key: @api_key || API_KEY) if args[:params]
     super(scope, args)
   end
 
-  # pagination code originally from http://developer.37signals.com/highrise/highrise.rb
-  #
+  # pagination code originally from
+  # http://developer.37signals.com/highrise/highrise.rb
   def self.find_everything(options = {})
     records = []
     each(options) { |record| records << record }
