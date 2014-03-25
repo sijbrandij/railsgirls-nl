@@ -1,0 +1,10 @@
+AllCops:
+  Excludes:
+    - db/**
+    - config/**
+    
+Documentation:
+  Enabled: false
+
+Encoding:
+  Enabled: false
