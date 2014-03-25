@@ -1,8 +1,8 @@
 RailsGirls::Application.routes.draw do
 
-  match 'participate' => 'meeting#index'
-  match 'connect' => 'connect#index'
-  match 'contributors' => 'contributors#index'
+  get 'participate' => 'meeting#index'
+  get 'connect' => 'connect#index'
+  get 'contributors' => 'contributors#index'
 
   resources :resources do
     post 'upvote', :on => :member, :as => :upvote
