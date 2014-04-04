@@ -12,18 +12,18 @@ How to contribute to RailsGirlsNL
 
 Development installation:
 
- - Use Ruby 1.9 and install your prefered version of bundler and rails (3.2.12)
+ - Use Ruby 1.9 and install your prefered version of bundler and rails
  - (fork and) Clone or zip this project to your local development machine.
  - Run
 
         bundle install --without production
-(production has some big gem's that are not necessary in development)
+(production has some big gems that are not neccessary in development)
 
- - To be able to safe database data somewhere a `database.yml` is needed to tell the application where it can find the database and how this should be accessed. This repository comes with an example `database.yml` which uses sqlite3 (a simple file-based database). More info on sqlite3 can be found [here][1]. Copy or rename the `database.yml.example` in the `config` folder or while in the project path in your favorite Linux or Mac terminal run the command below.
+ - To be able to save database data somewhere a `database.yml` is needed to tell the application where it can find the database and how this should be accessed. This repository comes with an example `database.yml` which uses sqlite3 (a simple file-based database). More info on sqlite3 can be found [here][1]. Copy or rename the `database.yml.example` in the `config` folder or while in the project path in your favorite Linux or Mac terminal run the command below.
 
         cp config/database.yml.example config/database.yml
 this will make a copy of the file with the name database.yml
- - Now that the database can be accesed it's time to create it and get it ready for our first run. Run the command below to create the database and populate it with the right tables.
+ - Now that the database can be accessed it's time to create it and get it ready for our first run. Run the command below to create the database and populate it with the right tables.
 
         bundle exec rake db:setup
 
@@ -32,6 +32,6 @@ this will make a copy of the file with the name database.yml
         rails server
 
 Good luck!
-Happy commiting! And may the merges be ever in your favor
+Happy committing! And may the merges be ever in your favor
 
   [1]: http://zetcode.com/db/sqlite/introduction/
