@@ -2,15 +2,14 @@ class Resource < ActiveRecord::Base
   attr_accessible :title, :description, :url
 
   def upvote
-    self.upvotes = self.upvotes.succ
+    self.upvotes = upvotes.succ
   end
 
   def downvote
-    self.downvotes = self.downvotes.succ
+    self.downvotes = downvotes.succ
   end
 
   def votes
-    self.upvotes - self.downvotes
+    upvotes - downvotes
   end
-
 end
