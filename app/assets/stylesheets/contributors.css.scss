@@ -1,6 +1,15 @@
 li.contributor {
 	padding-bottom:15px;
-  list-style: none;
+    list-style: none;
+    float: left;
+    width: 19%;
+    text-align: center;
+}
+
+li.contributor img {
+	border-radius: 25px;
+	width: 150px;
+	height: 150px;
 }
 
 div.notice {
