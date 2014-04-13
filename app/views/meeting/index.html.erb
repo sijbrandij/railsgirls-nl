@@ -2,12 +2,16 @@
 	<div class="span8">
 		<%= render @meetup_events.shift %>
     <h3>Sponsors</h3>
-    <% @sponsors.each do |sponsor| %>
-      <p>
-        <h4><%= link_to sponsor.name, sponsor_path(sponsor) %></h4>
-        <%= link_to image_tag(sponsor.logo.url(:thumb)), sponsor_path(sponsor) if sponsor.logo_file_name %>
-      </p>
-    <% end %>
+    <ul class="thumbnails">
+      <% @sponsors.each do |sponsor| %>
+       <li class="span3">
+          <div class="thumbnail">
+            <h4><%= link_to sponsor.name, sponsor_path(sponsor) %></h4>
+            <%= link_to image_tag(sponsor.logo.url(:thumb)), sponsor_path(sponsor) if sponsor.logo_file_name %>
+          </div>
+        </li>
+      <% end %>
+    </ul>
 	</div>
 	<div class="span4">
 		<%= render @meetup_events %>
