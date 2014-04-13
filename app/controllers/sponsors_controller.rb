@@ -18,7 +18,13 @@ class SponsorsController < ApplicationController
 
   def create
     @sponsor = Sponsor.create(params[:sponsor])
-    redirect_to sponsor_path(@sponsor)
+    if @sponsor.save
+      flash[:notice] = "Sponsor created"
+      redirect_to sponsor_path(@sponsor)
+    else
+      flash[:notice] = "Sponsor not created: " + @sponsor.errors.full_messages.join(", ")
+
+    end
   end
 
   def update
@@ -27,6 +33,7 @@ class SponsorsController < ApplicationController
       flash[:notice] = "Sponsor updated"
       redirect_to sponsors_path
     else
+      flash[:notice] = "Sponsor not updated: " + @sponsor.errors.full_messages.join(", ")
       render 'edit'
     end
   end

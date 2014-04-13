@@ -3,6 +3,8 @@
   <%= form.text_field :name %>
   <%= form.label "Description" %>
   <%= form.text_field :description %>
+  <%= form.label "URL" %>
+  <%= form.text_field :url %>
   <%= form.label "Logo" %>
   <%= image_tag(@sponsor.logo.url(:thumb)) if @sponsor.logo %>
   <br />
