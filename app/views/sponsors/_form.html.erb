@@ -1,0 +1,12 @@
+<%= form_for @sponsor do |form| %>
+  <%= form.label "Name" %>
+  <%= form.text_field :name %>
+  <%= form.label "Description" %>
+  <%= form.text_field :description %>
+  <%= form.label "Logo" %>
+  <%= image_tag(@sponsor.logo.url(:thumb)) if @sponsor.logo %>
+  <br />
+  <%= form.file_field :logo %>
+  <br />
+  <%= form.submit "Submit" %>
+<% end %>

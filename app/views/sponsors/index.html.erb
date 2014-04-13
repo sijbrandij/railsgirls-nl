@@ -1,0 +1,16 @@
+<h1>Sponsors</h1>
+
+<%= link_to "New sponsor", new_sponsor_path %>
+
+<table class="table table-hover">
+  <thead>
+    <th>Name</th>
+    <th>Description</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </thead>
+  <tbody>
+    <%= render @sponsors %>
+  </tbody>
+</table>
