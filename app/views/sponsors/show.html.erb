@@ -1,5 +1,5 @@
 <h1><%= @sponsor.name %></h1>
-<%= image_tag @sponsor.logo.url(:medium) %>
+<%= image_tag @sponsor.logo.url(:medium) if @sponsor.logo_file_name %>
 <p>
   <%= @sponsor.description %>
 </p>

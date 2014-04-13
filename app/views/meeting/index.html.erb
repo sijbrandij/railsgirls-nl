@@ -1,6 +1,15 @@
 <div class="row-fluid">
 	<div class="span8">
 		<%= render @meetup_events.shift %>
+    <p>
+      <h3>Sponsors</h3>
+      <% @sponsors.each do |sponsor| %>
+        <%= link_to image_tag(sponsor.logo.url(:thumb)), sponsor_path(sponsor) if sponsor.logo_file_name %>
+        <br />
+        <b><%= link_to sponsor.name, sponsor_path(sponsor) %></b>
+        <br />
+      <% end %>
+    </p>
 	</div>
 	<div class="span4">
 		<%= render @meetup_events %>
