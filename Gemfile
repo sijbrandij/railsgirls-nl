@@ -20,6 +20,7 @@ gem 'bootstrap-sass'
 gem 'twitter-bootstrap-rails'
 
 gem 'jquery-rails'
+gem 'paperclip'
 
 group :development do
 	gem 'awesome_print'

@@ -41,6 +41,10 @@ GEM
       rack (>= 1.0.0)
       rack-test (>= 0.5.4)
       xpath (~> 2.0)
+    climate_control (0.0.3)
+      activesupport (>= 3.0)
+    cocaine (0.5.3)
+      climate_control (>= 0.0.3, < 1.0)
     coderay (1.1.0)
     coffee-rails (3.2.2)
       coffee-script (>= 2.2.0)
@@ -96,6 +100,11 @@ GEM
     multipart-post (1.2.0)
     nokogiri (1.6.1)
       mini_portile (~> 0.5.0)
+    paperclip (3.5.4)
+      activemodel (>= 3.0.0)
+      activesupport (>= 3.0.0)
+      cocaine (~> 0.5.3)
+      mime-types
     parser (2.1.7)
       ast (~> 1.1)
       slop (~> 3.4, >= 3.4.5)
@@ -205,6 +214,7 @@ DEPENDENCIES
   faraday
   jquery-rails
   launchy
+  paperclip
   pg
   pry
   rails (~> 3.2.12)

@@ -1,0 +1,16 @@
+// Place all the styles related to the Sponsors controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+li.sponsor {
+  padding-bottom:15px;
+  list-style: none;
+  float: left;
+  width: 19%;
+  text-align: center;
+}
+
+li.sponsor img {
+  border-radius: 25px;
+  width: 200px;;
+}

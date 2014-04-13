@@ -1,6 +1,7 @@
 class MeetingController < ApplicationController
   def index
     @meetup_events = cached_events
+    @sponsors = Sponsor.all
   end
 
   private
