@@ -31,6 +31,9 @@ this will make a copy of the file with the name database.yml
 
         rails server
 
+  - To run the tests, we're using Rails' built-in testing: TestUnit.
+        (bundle exec) rake
+
 Good luck!
 Happy committing! And may the merges be ever in your favor
 
