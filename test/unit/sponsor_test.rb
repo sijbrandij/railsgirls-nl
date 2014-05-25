@@ -1,7 +1,9 @@
 require 'test_helper'
 
 class SponsorTest < ActiveSupport::TestCase
-  # test "the truth" do
-  #   assert true
-  # end
+  test 'should not create sponsor without a name' do
+    sponsor = Sponsor.new
+    refute sponsor.valid?
+    assert sponsor.errors[:name].any?
+  end
 end
