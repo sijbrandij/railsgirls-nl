@@ -21,6 +21,7 @@ gem 'twitter-bootstrap-rails'
 
 gem 'jquery-rails'
 gem 'paperclip'
+gem 'aws-sdk' # For uploads to s3 because Heroku doesn't store files
 
 group :development do
 	gem 'awesome_print'
