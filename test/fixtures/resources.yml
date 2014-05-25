@@ -1,0 +1,13 @@
+one:
+  title: 'Guide to Rails'
+  url: 'www.guidetorails.com'
+  description: 'Great guide for learning Rails'
+  upvotes: 0
+  downvotes: 0
+
+two:
+  title: 'Awesome resource'
+  url: 'www.awesomeresource.com'
+  description: 'awesome resource for learning Rails'
+  upvotes: 1
+  downvotes: 2

@@ -23,7 +23,7 @@ class SponsorsController < ApplicationController
       redirect_to sponsor_path(@sponsor)
     else
       flash[:notice] = "Sponsor not created: " + @sponsor.errors.full_messages.join(", ")
-
+      render 'new'
     end
   end
 
