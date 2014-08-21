@@ -1,7 +1,8 @@
 <div class="meetup">
 	<h2><%= meetup_event.name %></h2>
-	<%=#	meetup_event.description.html_safe %>
-	<p><strong>Date</strong><br />
+	<p>
+		<b>Date</b>
+		<br />
 	  <%= time_tag Time.at(meetup_event.time.to_i / 1000) %>
 	</p>
 	<% venue = meetup_event.venue if meetup_event.respond_to?(:venue) %>
