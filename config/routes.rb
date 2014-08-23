@@ -1,8 +1,5 @@
 RailsGirls::Application.routes.draw do
-
   resources :sponsors
-
-
   match 'participate' => 'meeting#index'
   match 'connect' => 'connect#index'
   match 'contributors' => 'contributors#index'

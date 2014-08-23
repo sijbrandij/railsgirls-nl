@@ -13,6 +13,20 @@
     </ul>
 	</div>
 	<div class="span4">
-		<%= render @meetup_events %>
+    <% @meetup_events[0..6].each do |event| %>
+      <div>
+        <p class='pull-right'>
+          <%= link_to "More info", event.event_url %>
+        </p>
+        <h5><%= event.name %></h5>
+        <p>
+          <b>Date</b>
+          <%= time_tag Time.at(event.time.to_i / 1000) %>
+        </p>
+        <%= event.venue.name if event.respond_to?(:venue) %>
+        <hr>
+      </div>
+    <% end %>
 	</div>
+  <p><%= link_to "There is more!", 'http://www.meetup.com/RailsGirls-NL/' %></p>
 </div>
