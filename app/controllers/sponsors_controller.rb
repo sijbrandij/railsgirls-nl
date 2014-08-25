@@ -1,11 +1,11 @@
 class SponsorsController < ApplicationController
+  before_filter :load_sponsor, only: [:show, :edit, :update, :destroy]
 
   def index
     @sponsors = Sponsor.all
   end
 
   def show
-    @sponsor = Sponsor.find(params[:id])
   end
 
   def new
@@ -13,7 +13,6 @@ class SponsorsController < ApplicationController
   end
 
   def edit
-    @sponsor = Sponsor.find(params[:id])
   end
 
   def create
@@ -28,7 +27,6 @@ class SponsorsController < ApplicationController
   end
 
   def update
-    @sponsor = Sponsor.find(params[:id])
     if @sponsor.update_attributes(params[:sponsor])
       flash[:notice] = "Sponsor updated"
       redirect_to sponsors_path
@@ -39,10 +37,15 @@ class SponsorsController < ApplicationController
   end
 
   def destroy
-    @sponsor = Sponsor.find(params[:id])
     if @sponsor.destroy
       flash[:notice] = "Sponsor destroyed"
       redirect_to sponsors_path
     end
+  end
+
+  private
+
+  def load_sponsor
+    @sponsor = Sponsor.find(params[:id])
   end
 end

@@ -1,4 +1,7 @@
 class ResourcesController < ApplicationController
+  before_filter :load_resource, only: [:show, :edit, :update, :upvote,
+    :destroy, :downvote]
+
   def index
     @resources = Resource.order('upvotes - downvotes desc').all
 
@@ -9,7 +12,6 @@ class ResourcesController < ApplicationController
   end
 
   def show
-    @resource = Resource.find(params[:id])
   end
 
   def new
@@ -29,11 +31,9 @@ class ResourcesController < ApplicationController
   end
 
   def edit
-    @resource = Resource.find(params[:id])
   end
 
   def update
-    @resource = Resource.find(params[:id])
     if @resource.update_attributes(params[:resource])
       flash[:notice] = 'Resource updated!'
       redirect_to resources_path
@@ -45,23 +45,26 @@ class ResourcesController < ApplicationController
   end
 
   def destroy
-    @resource = Resource.find(params[:id])
     @resource.destroy
     flash[:notice] = 'Resource deleted' if @resource.destroy
     redirect_to resources_path
   end
 
   def upvote
-    @resource = Resource.find(params[:id])
     @resource.upvote
     @resource.save
     redirect_to resources_path(format: :js)
   end
 
   def downvote
-    @resource = Resource.find(params[:id])
     @resource.downvote
     @resource.save
     redirect_to resources_path(format: :js)
+  end
+
+  private
+
+  def load_resource
+    @resource = Resource.find(params[:id])
   end
 end
