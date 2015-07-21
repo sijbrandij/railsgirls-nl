@@ -13,18 +13,24 @@
     </ul>
 	</div>
 	<div class="span4">
-    <% @meetup_events[0..6].each do |event| %>
+    <% if @meetup_events.any? %>
+      <% @meetup_events[0..6].each do |event| %>
+        <div>
+          <p class='pull-right'>
+            <%= link_to "More info", event.event_url %>
+          </p>
+          <h5><%= event.name %></h5>
+          <p>
+            <b>Date</b>
+            <%= time_tag Time.at(event.time.to_i / 1000) %>
+          </p>
+          <%= event.venue.name if event.respond_to?(:venue) %>
+          <hr>
+        </div>
+      <% end %>
+    <% else %>
       <div>
-        <p class='pull-right'>
-          <%= link_to "More info", event.event_url %>
-        </p>
-        <h5><%= event.name %></h5>
-        <p>
-          <b>Date</b>
-          <%= time_tag Time.at(event.time.to_i / 1000) %>
-        </p>
-        <%= event.venue.name if event.respond_to?(:venue) %>
-        <hr>
+        <p>There are currently no events.</p>
       </div>
     <% end %>
 	</div>
