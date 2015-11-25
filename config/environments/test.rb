@@ -7,9 +7,17 @@ RailsGirls::Application.configure do
   # and recreated between test runs. Don't rely on the data there!
   config.cache_classes = true
 
+  # Specify test order in preparation of Rails 5
+  config.active_support.test_order = :random
+
+  # Show errors in transactional callbacks
+  config.active_record.raise_in_transactional_callbacks = true
+
   # Configure static asset server for tests with Cache-Control for performance
-  config.serve_static_assets = true
+  config.serve_static_files = true
   config.static_cache_control = "public, max-age=3600"
+
+  config.eager_load = false
 
   # Log error messages when you accidentally call methods on nil
   config.whiny_nils = true
@@ -28,9 +36,6 @@ RailsGirls::Application.configure do
   # The :test delivery method accumulates sent emails in the
   # ActionMailer::Base.deliveries array.
   config.action_mailer.delivery_method = :test
-
-  # Raise exception on mass assignment protection for Active Record models
-  config.active_record.mass_assignment_sanitizer = :strict
 
   # Print deprecation notices to the stderr
   config.active_support.deprecation = :stderr

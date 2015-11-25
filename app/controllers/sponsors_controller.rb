@@ -16,7 +16,7 @@ class SponsorsController < ApplicationController
   end
 
   def create
-    @sponsor = Sponsor.create(params[:sponsor])
+    @sponsor = Sponsor.create(sponsor_params)
     if @sponsor.save
       flash[:notice] = "Sponsor created"
       redirect_to sponsor_path(@sponsor)
@@ -27,7 +27,7 @@ class SponsorsController < ApplicationController
   end
 
   def update
-    if @sponsor.update_attributes(params[:sponsor])
+    if @sponsor.update_attributes(sponsor_params)
       flash[:notice] = "Sponsor updated"
       redirect_to sponsors_path
     else
@@ -44,6 +44,10 @@ class SponsorsController < ApplicationController
   end
 
   private
+
+  def sponsor_params
+    params.require(:sponsor).permit(:name, :description, :logo, :url)
+  end
 
   def load_sponsor
     @sponsor = Sponsor.find(params[:id])
