@@ -1,6 +1,8 @@
 class Resource < ActiveRecord::Base
   attr_accessible :title, :description, :url
 
+  validate :title, :description, :url, presence: true
+
   def upvote
     self.upvotes = upvotes.succ
   end
