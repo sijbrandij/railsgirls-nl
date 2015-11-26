@@ -1,14 +1,21 @@
-<%= form_for @sponsor do |form| %>
-  <%= form.label "Name" %>
-  <%= form.text_field :name %>
-  <%= form.label "Description" %>
-  <%= form.text_field :description %>
-  <%= form.label "URL" %>
-  <%= form.text_field :url %>
-  <%= form.label "Logo" %>
-  <%= image_tag(@sponsor.logo.url(:thumb)) if @sponsor.logo %>
-  <br />
-  <%= form.file_field :logo %>
-  <br />
-  <%= form.submit "Submit" %>
+<%= form_for @sponsor, html: { multipart: true } do |form| %>
+  <div class='form-group'>
+    <%= form.label "Name" %>
+    <%= form.text_field :name, class: 'form-control' %>
+  </div>
+  <div class='form-group'>
+    <%= form.label "Description" %>
+    <%= form.text_field :description, class: 'form-control' %>
+  </div>
+  <div class="form-group">
+    <%= form.label "URL" %>
+    <%= form.text_field :url, class: 'form-control' %>
+  </div>
+  <div class="form-group">
+    <%= form.label "Logo" %>
+    <%= image_tag(@sponsor.logo.url(:thumb)) if @sponsor.logo.present? %>
+    <br />
+    <%= form.file_field :logo, class: 'form-control' %>
+  </div>
+  <%= form.submit "Submit", class: 'btn btn-primary' %>
 <% end %>

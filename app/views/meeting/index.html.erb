@@ -1,6 +1,7 @@
-<div class="row-fluid">
-	<div class="span8">
-		<%= render @meetup_events.shift unless @meetup_events.none? %>
+<div class="row">
+	<div class="col-md-8">
+    <% event = @meetup_events.shift unless @meetup_events.none? %>
+		<%= render event if event %>
     <hr>
     <h3>Sponsors</h3>
     <ul class="thumbnails">
@@ -12,7 +13,7 @@
       <% end %>
     </ul>
 	</div>
-	<div class="span4">
+	<div class="col-md-4">
     <% if @meetup_events.any? %>
       <% @meetup_events[0..6].each do |event| %>
         <div>
@@ -28,11 +29,11 @@
           <hr>
         </div>
       <% end %>
-    <% else %>
+    <% elsif !event %>
       <div>
         <p>There are currently no events.</p>
       </div>
     <% end %>
 	</div>
-  <p><%= link_to "There is more!", 'http://www.meetup.com/RailsGirls-NL/' %></p>
+  <p><%= link_to "Check us out op Meetup!", 'http://www.meetup.com/RailsGirls-NL/' %></p>
 </div>
