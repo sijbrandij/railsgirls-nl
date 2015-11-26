@@ -8,18 +8,28 @@
   <link href='http://fonts.googleapis.com/css?family=Lilita+One' rel='stylesheet' type='text/css'>
 </head>
 <body>
-
   <div class="header">
     <span class="logo">RailsGirls NL</span>
-    <div class="navbar" style="color: red;">
-      <div class="navbar-inner">
-        <ul class="nav">
-          <li><%= link_to "Home", root_path %></li>
-          <li><%= link_to "Resources", resources_path %></li>
-          <li><%= link_to "Connect", connect_path %></li>
-          <li><%= link_to "Contributors", contributors_path %></li>
-          <li><%#= link_to "Sponsors", sponsors_path %></li>
-        </ul>
+    <div class="navbar navbar-default" style="background-color: #D3360B; color: white; border: none;">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </div>
+
+        <!--Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav">
+            <li><%= link_to "Home", root_path %></li>
+            <li><%= link_to "Resources", resources_path %></li>
+            <li><%= link_to "Connect", connect_path %></li>
+            <li><%= link_to "Contributors", contributors_path %></li>
+          </ul>
+        </div>
       </div>
     </div>
   </div>
