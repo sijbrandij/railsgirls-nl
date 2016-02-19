@@ -1,5 +1,5 @@
 class ResourcesController < ApplicationController
-  before_action :authenticate_user!, only: [:new, :create, :edit, :update]
+  before_action :authenticate_user!, only: [:new, :create, :edit, :update, :destroy]
   before_filter :load_resource, only: [:show, :edit, :update, :upvote,
     :destroy, :downvote]
 
