@@ -6,7 +6,9 @@
             <th>Description</th>
             <th>URL</th>
             <th>Votes</th>
-            <th>Edit</th>
+            <% if user_signed_in? %>
+                <th></th>
+            <% end %>
         </tr>
     </thead>
     <tbody>
@@ -20,7 +22,9 @@
                 <%= link_to '<i class="icon-thumbs-up"> </i>'.html_safe, upvote_resource_path(resource, :format => :js), :method => :post, :remote => true %>
                 | <%= link_to '<i class="icon-thumbs-down"> </i>'.html_safe, downvote_resource_path(resource, :format => :js), :method => :post, :remote => true %>
             </td>
-            <td><%= link_to("Edit", edit_resource_path(resource)) %></td>
+            <% if user_signed_in? %>
+                <td><%= link_to("Edit", edit_resource_path(resource)) %></td>
+            <% end %>
           </tr>
         <% end %>
     </tbody>

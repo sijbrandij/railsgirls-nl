@@ -1,4 +1,5 @@
 RailsGirls::Application.routes.draw do
+  devise_for :users
   resources :sponsors
   get 'participate' => 'meeting#index'
   get 'connect' => 'connect#index'
