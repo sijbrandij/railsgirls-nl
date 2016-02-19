@@ -1,5 +1,7 @@
 RailsGirls::Application.routes.draw do
-  devise_for :users
+  devise_for :users, controllers: {
+    registrations: 'users/registrations'
+  }
   resources :sponsors
   get 'participate' => 'meeting#index'
   get 'connect' => 'connect#index'

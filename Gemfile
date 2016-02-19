@@ -22,6 +22,7 @@ gem 'jquery-rails'
 gem 'paperclip'
 gem 'aws-sdk' # For uploads to s3 because Heroku doesn't store files
 gem 'devise'
+gem 'recaptcha', require: 'recaptcha/rails'
 
 group :development do
 	gem 'awesome_print'
