@@ -1,3 +1,3 @@
 Given(/^that I am a logged in user$/) do
-  pending # express the regexp above with the code you wish you had
+  @user = FactoryGirl.create :user, email: Faker::Internet.email, :password => 'letmeinplease', :password_confirmation => 'letmeinplease'
 end
