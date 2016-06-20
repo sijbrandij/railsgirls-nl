@@ -38,9 +38,14 @@ end
 
 group :test do
   gem 'factory_girl_rails'
-  gem 'rspec-rails'
   gem 'cucumber-rails', :require => false
   gem 'database_cleaner'
   gem 'launchy'
   gem 'pry'
+end
+
+
+group :development, :test do
+  gem 'faker'
+  gem 'rspec-rails'
 end
