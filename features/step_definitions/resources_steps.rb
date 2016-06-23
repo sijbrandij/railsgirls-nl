@@ -14,5 +14,5 @@ When(/^I fill and submit the form$/) do
 end
 
 Then(/^I should see new resource created$/) do
-  page.should have_content 'Resource created'
+  expect(page).to have_content 'Resource created'
 end

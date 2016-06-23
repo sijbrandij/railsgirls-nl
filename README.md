@@ -12,12 +12,12 @@ How to contribute to RailsGirlsNL
 
 Development installation:
 
- - Use Ruby 1.9 and install your prefered version of bundler and rails
+ - Use Ruby 1.9 and install your preferred version of bundler and rails
  - (fork and) Clone or zip this project to your local development machine.
  - Run
 
         bundle install --without production
-(production has some big gems that are not neccessary in development)
+(production has some big gems that are not necessary in development)
 
  - To be able to save database data somewhere a `database.yml` is needed to tell the application where it can find the database and how this should be accessed. This repository comes with an example `database.yml` which uses sqlite3 (a simple file-based database). More info on sqlite3 can be found [here][1]. Copy or rename the `database.yml.example` in the `config` folder or while in the project path in your favorite Linux or Mac terminal run the command below.
 
@@ -29,10 +29,9 @@ this will make a copy of the file with the name database.yml
 
  - Now let's boot the server. Type the command below and check 'localhost:3000' in your favorite browser.
 
-        rails server
+        `bin/rails server`
 
-  - To run the tests, we're using Rails' built-in testing: TestUnit.
-        (bundle exec) rake
+  - To run the tests; for Cucumber and Rspec: `bin/rake`. For minitest: `bin/rake test`
 
 Good luck!
 Happy committing! And may the merges be ever in your favor
